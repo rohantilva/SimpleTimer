@@ -1,21 +1,19 @@
-var timer = document.getElementById('timer');
-var toggleBtn = document.getElementById('toggle');
+var timer = document.getElementById('clock');
+var pressBtn = document.getElementById('press');
 var resetBtn = document.getElementById('reset');
 
 var watch = new Stopwatch(timer);
 
-toggleBtn.addEventListener('click', function() {
+pressBtn.addEventListener('click', function() {
 	if (watch.on) {
 		watch.stop();
-		toggleBtn.textContent = 'Start';
+		pressBtn.textContent = 'Start';
 	} else {
 		watch.start();
-		toggleBtn.textContent = 'Stop';
+		pressBtn.textContent = 'Stop';
 	}
 } );
 
 resetBtn.addEventListener('click', function() {
 	watch.reset();
 } );
-
-console.log("hi")
